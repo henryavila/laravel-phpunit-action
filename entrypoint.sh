@@ -2,7 +2,13 @@
 
 composer install --prefer-dist
 
-cp .env.example .env
+if [ -f ".env.testing" ]
+then
+	cp .env.testing .env
+else
+	cp .env.example .env
+fi
+
 
 php artisan key:generate
 
