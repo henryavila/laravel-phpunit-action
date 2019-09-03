@@ -10,11 +10,13 @@ LABEL "homepage"="https://github.com/nathanheffley/laravel-phpunit-action"
 LABEL "maintainer"="Nathan Heffley <nathan@nathanheffley.com>"
 
 # install Additional Dependencies (linke PHP Extensions)
-ADD install-dependencies.sh /usr/sbin/install-dependencies.sh
+ADD install-dependencies.sh /install-dependencies.sh
+RUN chmod +x /install-dependencies.sh
 RUN /usr/sbin/install-dependencies.sh
 
 # Download and install NodeJS
-ADD install-node.sh /usr/sbin/install-node.sh
+ADD install-node.sh /install-node.sh
+UN chmod +x /install-node.sh
 RUN /usr/sbin/install-node.sh
 
 ADD entrypoint.sh /entrypoint.sh
