@@ -12,12 +12,12 @@ LABEL "maintainer"="Nathan Heffley <nathan@nathanheffley.com>"
 # install Additional Dependencies (linke PHP Extensions)
 ADD install-dependencies.sh /install-dependencies.sh
 RUN chmod +x /install-dependencies.sh
-RUN /usr/sbin/install-dependencies.sh
+RUN /install-dependencies.sh
 
 # Download and install NodeJS
 ADD install-node.sh /install-node.sh
 RUN chmod +x /install-node.sh
-RUN /usr/sbin/install-node.sh
+RUN /install-node.sh
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
