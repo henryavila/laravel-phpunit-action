@@ -18,4 +18,5 @@ ADD install-node.sh /usr/sbin/install-node.sh
 RUN /usr/sbin/install-node.sh
 
 ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
