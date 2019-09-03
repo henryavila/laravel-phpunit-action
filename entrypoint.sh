@@ -12,4 +12,4 @@ fi
 
 php artisan key:generate
 
-php vendor/bin/phpunit
+php vendor/bin/phpunit --coverage-html tests/report
