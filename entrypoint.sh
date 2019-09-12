@@ -14,3 +14,4 @@ php artisan key:generate
 php artisan migrate --seed
 
 php vendor/bin/phpunit --coverage-xml tests/report
+zip -r coverage.zip tests/report/
