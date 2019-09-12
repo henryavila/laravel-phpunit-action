@@ -8,7 +8,7 @@ name: Tests
 on: [push]
 
 jobs:
-  phpunit:
+  unitTest:
     name: PHPUnit
     runs-on: ubuntu-latest
     steps:
